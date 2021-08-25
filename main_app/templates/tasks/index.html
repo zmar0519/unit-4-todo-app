@@ -14,20 +14,22 @@
 <section class="card-container">
   {% for task in tasks %}
     <div class="card">
-      <div class="card-content">
-        <div class="card-img-container">
-        </div>
-        <h2 class="card-title">{{ task.name }}</h2>
-          <p>Task is due on {{ task.dueDate }}</p>
-        <p><small>{{ task.description }}</small></p>
-        {% if task.isComplete != false %}
-          <p>Task is completed!</p>
-        {% else %}
-          <p>Task is incomplete!</p>
-        {% endif %}
+      <a href="/tasks/{{ task.id }}">
+        <div class="card-content">
+          <div class="card-img-container">
+          </div>
+          <h2 class="card-title">{{ task.name }}</h2>
+            <p>Task is due on {{ task.dueDate }}</p>
+            <p><small>{{ task.description }}</small></p>
+            {% if task.isComplete != false %}
+            <p>Task is completed!</p>
+            {% else %}
+            <p>Task is incomplete!</p>
+            {% endif %}
+          </div>
+      </a>
       </div>
-    </div>
-  {% endfor %}
+    {% endfor %}
 </section>
 
 {% endblock %}
