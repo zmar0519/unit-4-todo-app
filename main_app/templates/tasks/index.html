@@ -14,7 +14,7 @@
 <section class="card-container">
   {% for task in tasks %}
     <div class="card">
-      <a href="/tasks/{{ task.id }}">
+      <a href="{% url 'tasks_detail' task.id %}">
         <div class="card-content">
           <div class="card-img-container">
           </div>
