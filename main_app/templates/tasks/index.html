@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/task-index.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+  <h1>Task List</h1>
+</section>
+
+<section class="card-container">
+  {% for task in tasks %}
+    <div class="card">
+      <div class="card-content">
+        <div class="card-img-container">
+        </div>
+        <h2 class="card-title">{{ task.name }}</h2>
+          <p>Task is due on {{ task.dueDate }}</p>
+        <p><small>{{ task.description }}</small></p>
+        {% if task.isComplete != false %}
+          <p>Task is completed!</p>
+        {% else %}
+          <p>Task is incomplete!</p>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
