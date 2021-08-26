@@ -17,13 +17,6 @@ def tasks_detail(request, task_id):
   task = Task.objects.get(id=task_id)
   return render(request, 'tasks/detail.html', { 'task': task })
 
-# class Task:
-#   def __init__(self, name, dueDate, description, isComplete):
-#       self.name = name
-#       self.dueDate = dueDate
-#       self.description = description
-#       self.isComplete = isComplete
-
 tasks = [
   Task('Build todo app', '9/27/2021', 'Python Project', False),
   Task('Test', '9/28/2021', 'Test', False),
