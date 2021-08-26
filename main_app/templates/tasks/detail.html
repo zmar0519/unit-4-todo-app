@@ -15,7 +15,7 @@
   <div class="task-details">
     <h1>{{ task.name }}</h1>
       <h2>The task is due {{ task.dueDate }}</h2>
-    {% if task.isComplete !=True %}
+    {% if task.isComplete != True %}
       <h2>This task is incomplete!<h2>
     {% else %}
       <h2>This task is complete!</h2>
