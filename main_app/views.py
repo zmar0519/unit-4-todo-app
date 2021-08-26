@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Task
+from django.views.generic.edit import CreateView
 from django.views.generic import ListView
 
 # Create your views here.
@@ -21,3 +22,7 @@ tasks = [
   Task('Build todo app', '9/27/2021', 'Python Project', False),
   Task('Test', '9/28/2021', 'Test', False),
 ]
+
+class TaskCreate(CreateView):
+  model = Task
+  fields = '__all__'
