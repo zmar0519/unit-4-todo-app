@@ -25,4 +25,4 @@ tasks = [
 
 class TaskCreate(CreateView):
   model = Task
-  fields = '__all__'
+  fields = 'name', 'dueDate', 'description'
