@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from .models import Task
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView
+from django.contrib.auth.views import LoginView
 
 # Create your views here.
 def home(request):
@@ -26,3 +27,15 @@ tasks = [
 class TaskCreate(CreateView):
   model = Task
   fields = 'name', 'dueDate', 'description'
+  success_url = '/tasks/'
+
+class TaskUpdate(UpdateView):
+  model = Task
+  fields = '__all__'
+
+class TaskDelete(DeleteView):
+  model = Task
+  success_url = '/tasks/'
+
+class Home(LoginView):
+  template_name = 'home.html'
