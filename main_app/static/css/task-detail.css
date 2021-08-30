@@ -1,3 +1,9 @@
 body {
-  background-color: grey;
+  background-color: whitesmoke;
+  padding: 10px;
+}
+
+.task-container {
+  border: solid 1px black;
+  text-align: center;
 }

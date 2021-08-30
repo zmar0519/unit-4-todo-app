@@ -32,7 +32,7 @@ def signup(request):
     if form.is_valid():
       user = form.save()
       login(request, user)
-      return redirect('task_index')
+      return redirect('home')
     else:
       error_message = "Invalid Sign up = try again"
   form = UserCreationForm()

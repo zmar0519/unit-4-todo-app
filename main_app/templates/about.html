@@ -1,7 +1,10 @@
+{% extends 'base.html' %}
 {% load static %}
+
+{% block head %}
+
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href='{% static 'css/about.css' %}'>
 <head>
   <meta charset="UTF-8">
@@ -9,6 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo App</title>
 </head>
+{% endblock %}
+{% block content %}
 <body>
   <h1>About the Todo App</h1>
   <p>Welcome to my Unit 4 project! This todo app is designed to 
@@ -22,3 +27,4 @@
   </p>
 </body>
 </html>
+{% endblock %}
