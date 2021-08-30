@@ -4,7 +4,7 @@ Find the game available [here](https://todoapp-zm.herokuapp.com/)
 
 ## Getting Started
 ### Background
-Todo's have been famous for hundreds of years and can trace their origin back to the famous British General Gerard L. Todo used to give his soldiers tasks which they began calling 'Todos'. As the years went on many apps emerged to allow people to keep track of these todos and while there are many mediocre choices the best by far was ClickUp...until now! Introducing ClickDown!
+Todo's have been famous for hundreds of years and can trace their origin back to the famous British General Gerard L. Todo. He used to give his soldiers tasks which they began calling 'Todos'. Even though General Todo famously lost to Napolean his legacy had already been cemented. The Queen posthumously awarded him a knighthood for his bravery and the innovations he made in productivity and organization. As the years went on many apps emerged to allow people to keep track of these todos and while there are many mediocre choices the best by far was ClickUp...until now! Introducing ClickDown!
 
 ### Instructions
 This app allows you to keep track of all the todos that your team has to complete for a specific project. Create an account, view the todo's and start marking them complete as you finish them.
