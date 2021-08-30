@@ -1,0 +1,16 @@
+body {
+  background-color: whitesmoke;
+  padding: 10px;
+}
+
+.task-container {
+  border: solid 1px black;
+  text-align: center;
+  padding: 15px;
+}
+
+.whole-task {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
