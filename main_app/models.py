@@ -7,7 +7,7 @@ class Task(models.Model):
   name = models.CharField(max_length=100)
   dueDate = models.DateField()
   description = models.CharField(max_length=500)
-  isComplete = models.BooleanField(default=False)
+  isComplete = models.BooleanField(default=False, verbose_name='Complete?')
 
   def __str__(self):
     return self.name
