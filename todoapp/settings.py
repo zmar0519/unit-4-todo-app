@@ -32,6 +32,7 @@ DEBUG_PROPAGATE_EXCEPTIONS = True
 
 ALLOWED_HOSTS = []
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Application definition
 
@@ -138,4 +139,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Configure Django App for Heroku.
 import django_on_heroku
-django_on_heroku.settings(config=locals(), staticfiles=False,logging=False)
+django_on_heroku.settings(locals())
