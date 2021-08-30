@@ -1,4 +1,4 @@
-# CLICKDOWN
+# ClickDown
 ## by Zachary Martin
 Find the game available [here](https://todoapp-zm.herokuapp.com/)
 
