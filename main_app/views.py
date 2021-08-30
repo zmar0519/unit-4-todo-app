@@ -5,6 +5,8 @@ from django.views.generic import ListView, DetailView
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 def home(request):
@@ -13,10 +15,12 @@ def home(request):
 def about(request):
   return render(request, 'about.html')
 
+@login_required
 def tasks_index(request):
   tasks = Task.objects.all()
   return render(request, 'tasks/index.html', { 'tasks': tasks })
 
+@login_required
 def tasks_detail(request, task_id):
   task = Task.objects.get(id=task_id)
   return render(request, 'tasks/detail.html', { 'task': task })
@@ -40,7 +44,7 @@ tasks = [
   Task('Test', '9/28/2021', 'Test', False),
 ]
 
-class TaskCreate(CreateView):
+class TaskCreate(LoginRequiredMixin, CreateView):
   model = Task
   fields = 'name', 'dueDate', 'description'
   success_url = '/tasks/'
@@ -48,11 +52,11 @@ class TaskCreate(CreateView):
     form.instance.user = self.request.user
     return super().form_valid(form)
 
-class TaskUpdate(UpdateView):
+class TaskUpdate(LoginRequiredMixin, UpdateView):
   model = Task
   fields = '__all__'
 
-class TaskDelete(DeleteView):
+class TaskDelete(LoginRequiredMixin, DeleteView):
   model = Task
   success_url = '/tasks/'
 
